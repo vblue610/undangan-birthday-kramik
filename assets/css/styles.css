@@ -1,23 +1,23 @@
 /* Hallmark 2.0.0 | theme: indie-editorial-simple | genre: atmospheric | shape: single-column-invitation | signature: simple-cover-opener */
 
 :root {
-  --bg: #111110;
-  --bg-scrim: rgba(17, 17, 16, 0.88);
-  --cover-scrim: rgba(17, 17, 16, 0.72);
-  --surface: #1b1a18;
-  --surface-card: rgba(24, 22, 20, 0.92);
-  --surface-2: #242220;
-  --paper: #f3efe6;
-  --text: #f3efe6;
-  --muted: #b5aea2;
-  --accent: #e2a832;
-  --accent-hover: #f0ba4b;
-  --on-accent: #111110;
-  --border: rgba(243, 239, 230, 0.16);
-  --success: #7fb08c;
-  --shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
-  --font-display: "Instrument Serif", Georgia, serif;
-  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --bg: #111110;                                       /* Warna latar belakang utama halaman (hitam arang hangat) */
+  --bg-scrim: rgba(17, 17, 16, 0.88);                  /* Lapisan gelap di atas gambar latar pada konten utama */
+  --cover-scrim: rgba(17, 17, 16, 0.72);               /* Lapisan gelap di atas gambar latar pada sampul (cover) */
+  --surface: #1b1a18;                                  /* Warna latar kartu dan kotak bagian acara/lokasi/RSVP */
+  --surface-card: rgba(24, 22, 20, 0.92);              /* Warna latar semi-transparan untuk kotak sampul (.cover-box) */
+  --surface-2: #242220;                                /* Warna latar sekunder (input form, tombol sekunder, item daftar) */
+  --paper: #f3efe6;                                    /* Warna krem terang untuk notifikasi toast */
+  --text: #f3efe6;                                     /* Warna teks utama agar kontras di atas latar gelap */
+  --muted: #b5aea2;                                    /* Warna teks sekunder/keterangan yang lebih lembut */
+  --accent: #e2a832;                                   /* Warna aksen utama (kuning madu, serasi dengan Pablo Honey) */
+  --accent-hover: #f0ba4b;                             /* Warna aksen saat kursor diarahkan (hover) */
+  --on-accent: #111110;                                /* Warna teks gelap di atas tombol aksen atau toast terang */
+  --border: rgba(243, 239, 230, 0.16);                 /* Warna garis tepi tipis pada kartu, input, dan pemisah */
+  --success: #7fb08c;                                  /* Warna teks status berhasil (konfirmasi RSVP terkirim) */
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.45);           /* Bayangan lembut untuk kotak sampul dan toast */
+  --font-display: "Instrument Serif", Georgia, serif;  /* Jenis huruf untuk judul besar (h1, h2, h3, angka countdown) */
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif; /* Jenis huruf untuk teks isi, label, dan tombol */
 }
 
 * {
