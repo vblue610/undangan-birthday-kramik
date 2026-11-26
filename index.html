@@ -4,382 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Undangan Ulang Tahun Ikram · 12 Oktober</title>
-  <meta name="description" content="Undangan digital perayaan ulang tahun Ikram pada 12 Oktober. Konfirmasi kehadiran, lokasi acara, dan buku tamu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <!-- 1. COVER / SAMPUL UNDANGAN -->
-  <header id="cover" class="cover-overlay" aria-label="Sampul Undangan">
-    <div class="cover-inner">
-      <div class="cover-meta">
-        <span>Undangan Malam Perayaan</span>
-        <span>12 Oktober · Jakarta Selatan</span>
-      </div>
+  <header id="cover" class="cover" aria-label="Sampul Undangan">
+    <div class="cover-box">
+      <p class="muted">Undangan Ulang Tahun, 12 Oktober</p>
+      <h1>Ulang Tahun Ikram</h1>
+      <p class="muted">Malam akustik dan makan malam hangat bersama sahabat terdekat.</p>
 
-      <div>
-        <h1 class="cover-title">Ulang Tahun Ikram</h1>
-        <p class="cover-subtitle">
-          Satu malam penuh obrolan hangat, musik akustik, dan makan malam bersama.
-        </p>
-      </div>
-
-      <div class="guest-card">
-        <span class="guest-label">Kepada yang terhormat:</span>
+      <div class="guest-box">
+        <span class="muted">Kepada yang terhormat:</span>
         <strong id="guest-name" class="guest-name">Sahabat Terdekat</strong>
       </div>
 
-      <div class="cover-actions">
-        <button type="button" id="open-invitation-btn" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M4 6h16v12H4z"/>
-            <path d="m4 7 8 6 8-6"/>
-          </svg>
-          <span>Buka Undangan</span>
-        </button>
-
-        <span class="cover-track-note">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M9 18V5l12-2v13"/>
-            <circle cx="6" cy="18" r="3"/>
-            <circle cx="18" cy="16" r="3"/>
-          </svg>
-          <span>Radiohead · High and Dry (Instrumental)</span>
-        </span>
-      </div>
+      <button type="button" id="open-btn" class="btn btn-primary">Buka Undangan</button>
     </div>
   </header>
 
-  <!-- KONTEN UTAMA -->
-  <main id="main-content" class="invitation-main container" tabindex="-1">
+  <main id="main" class="container" tabindex="-1">
     <!-- 2. INFORMASI ACARA & HITUNG MUNDUR -->
-    <section id="acara" class="reveal-on-scroll" aria-labelledby="acara-heading">
-      <div class="section-header">
-        <h2 id="acara-heading" class="section-title">Menuju 12 Oktober</h2>
-        <p class="section-desc">
-          Kami mengundangmu untuk hadir dan merayakan bertambahnya usia Ikram dalam suasana santai dan akrab.
-        </p>
+    <section id="acara" class="section reveal">
+      <h2>Menuju 12 Oktober</h2>
+      <p class="muted">Ruang Tengah Coffee &amp; Vinyl, Jl. Kemang Raya No. 42, Jakarta Selatan</p>
+
+      <div class="countdown" role="timer" aria-label="Hitung mundur acara">
+        <div class="cd-item"><span id="cd-days" class="cd-num">00</span><span class="muted">Hari</span></div>
+        <div class="cd-item"><span id="cd-hours" class="cd-num">00</span><span class="muted">Jam</span></div>
+        <div class="cd-item"><span id="cd-minutes" class="cd-num">00</span><span class="muted">Menit</span></div>
+        <div class="cd-item"><span id="cd-seconds" class="cd-num">00</span><span class="muted">Detik</span></div>
       </div>
 
-      <div class="countdown-grid" role="timer" aria-live="off" aria-label="Hitung mundur menuju acara">
-        <div class="countdown-box">
-          <span id="cd-days" class="countdown-value">00</span>
-          <span class="countdown-unit">Hari</span>
+      <div class="grid-3">
+        <div class="box">
+          <span class="muted">Tanggal &amp; Waktu</span>
+          <strong>Selasa, 12 Oktober 2027</strong>
+          <span class="muted">Pukul 19.00 s.d. 22.00 WIB</span>
         </div>
-        <div class="countdown-box">
-          <span id="cd-hours" class="countdown-value">00</span>
-          <span class="countdown-unit">Jam</span>
+        <div class="box">
+          <span class="muted">Lokasi</span>
+          <strong>Ruang Tengah Coffee &amp; Vinyl</strong>
+          <span class="muted">Kemang Raya No. 42, Jakarta</span>
         </div>
-        <div class="countdown-box">
-          <span id="cd-minutes" class="countdown-value">00</span>
-          <span class="countdown-unit">Menit</span>
-        </div>
-        <div class="countdown-box">
-          <span id="cd-seconds" class="countdown-value">00</span>
-          <span class="countdown-unit">Detik</span>
+        <div class="box">
+          <span class="muted">Dress Code</span>
+          <strong>Indie Casual</strong>
+          <span class="muted">Krem, cokelat, atau hitam</span>
         </div>
       </div>
 
-      <div class="event-details-grid">
-        <article class="detail-item">
-          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="18" rx="2"/>
-            <path d="M16 2v4M8 2v4M3 10h18"/>
-          </svg>
-          <h3 class="detail-heading">Tanggal &amp; Waktu</h3>
-          <p class="detail-value">Selasa, 12 Oktober 2027</p>
-          <p class="detail-sub">Pukul 19.00 s.d. 22.00 WIB</p>
-        </article>
-
-        <article class="detail-item">
-          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
-            <circle cx="12" cy="11" r="2.2"/>
-          </svg>
-          <h3 class="detail-heading">Lokasi Acara</h3>
-          <p class="detail-value">Ruang Tengah Coffee &amp; Vinyl</p>
-          <p class="detail-sub">Jl. Kemang Raya No. 42, Jakarta Selatan</p>
-        </article>
-
-        <article class="detail-item">
-          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
-          </svg>
-          <h3 class="detail-heading">Dress Code</h3>
-          <p class="detail-value">Indie Casual / Earth Tone</p>
-          <p class="detail-sub">Krem, cokelat hangat, atau hitam</p>
-        </article>
-      </div>
-
-      <div class="calendar-actions">
-        <a id="gcal-link" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="18" rx="2"/>
-            <path d="M16 2v4M8 2v4M3 10h18"/>
-          </svg>
-          <span>Simpan ke Google Calendar</span>
-        </a>
-
-        <button type="button" id="ics-download-btn" class="btn btn-secondary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <path d="m7 10 5 5 5-5M12 15V3"/>
-          </svg>
-          <span>Unduh File .ics</span>
-        </button>
+      <div class="actions">
+        <a id="gcal-link" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Google Calendar</a>
+        <button type="button" id="ics-btn" class="btn btn-secondary">Unduh .ics</button>
       </div>
     </section>
 
-    <!-- 3. NAVIGASI LOKASI & AMPLOP DIGITAL / KADO -->
-    <section id="lokasi" class="reveal-on-scroll" aria-labelledby="lokasi-heading">
-      <div class="section-header">
-        <h2 id="lokasi-heading" class="section-title">Lokasi &amp; Kado Digital</h2>
-        <p class="section-desc">
-          Kehadiran dan doamu sudah merupakan hadiah terbaik. Jika ingin mengirimkan tanda kasih, informasi tertera di bawah ini.
-        </p>
-      </div>
-
-      <div class="location-gift-grid">
-        <div class="surface-panel">
+    <!-- 3. NAVIGASI LOKASI & AMPLOP DIGITAL -->
+    <section id="lokasi" class="section reveal">
+      <h2>Lokasi &amp; Kado Digital</h2>
+      <div class="grid-2">
+        <div class="box">
           <h3>Peta Lokasi</h3>
-          <div class="map-frame-wrap">
-            <iframe
-              class="map-frame"
-              title="Peta lokasi Ruang Tengah Coffee &amp; Vinyl Kemang"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Kemang+Raya+Jakarta+Selatan&output=embed">
-            </iframe>
-          </div>
-          <div>
-            <a
-              class="btn btn-secondary"
-              href="https://www.google.com/maps/search/?api=1&query=Kemang+Raya+No.+42+Jakarta+Selatan"
-              target="_blank"
-              rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M3 11l19-9-9 19-2-8-8-2z"/>
-              </svg>
-              <span>Buka di Google Maps</span>
-            </a>
-          </div>
+          <iframe
+            class="map"
+            title="Peta lokasi acara"
+            loading="lazy"
+            src="https://www.google.com/maps?q=Kemang+Raya+Jakarta+Selatan&output=embed">
+          </iframe>
+          <a
+            class="btn btn-secondary"
+            href="https://www.google.com/maps/search/?api=1&query=Kemang+Raya+No.+42+Jakarta+Selatan"
+            target="_blank"
+            rel="noopener noreferrer">Buka di Google Maps</a>
         </div>
 
-        <div class="surface-panel">
-          <h3>Amplop Digital &amp; Alamat Kado</h3>
-          <div class="gift-list">
-            <div class="gift-row">
-              <div class="gift-info">
-                <span class="gift-provider">Bank BCA</span>
-                <span id="rek-bca" class="gift-account">5420 8819 2304</span>
-                <span class="gift-owner">a.n. Ikram Maulana</span>
-              </div>
-              <span class="copy">
-                <button
-                  type="button"
-                  class="copy-button"
-                  command="--copy"
-                  commandfor="rek-bca"
-                  aria-label="Salin nomor rekening BCA">
-                  <svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <rect x="9" y="9" width="13" height="13" rx="2"/>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                  </svg>
-                  <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M20 6 9 17l-5-5"/>
-                  </svg>
-                  <span>Salin</span>
-                </button>
-                <span class="tip" role="status"></span>
-              </span>
+        <div class="box">
+          <h3>Amplop Digital &amp; Alamat</h3>
+          <div class="copy-row">
+            <div>
+              <span class="muted">Bank BCA (a.n. Ikram Maulana)</span>
+              <strong id="rek-bca">5420 8819 2304</strong>
             </div>
+            <button type="button" class="btn btn-secondary copy-btn" data-copy="rek-bca">Salin</button>
+          </div>
 
-            <div class="gift-row">
-              <div class="gift-info">
-                <span class="gift-provider">GoPay / DANA</span>
-                <span id="rek-ewallet" class="gift-account">0812 9044 7712</span>
-                <span class="gift-owner">a.n. Ikram Maulana</span>
-              </div>
-              <span class="copy">
-                <button
-                  type="button"
-                  class="copy-button"
-                  command="--copy"
-                  commandfor="rek-ewallet"
-                  aria-label="Salin nomor GoPay dan DANA">
-                  <svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <rect x="9" y="9" width="13" height="13" rx="2"/>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                  </svg>
-                  <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M20 6 9 17l-5-5"/>
-                  </svg>
-                  <span>Salin</span>
-                </button>
-                <span class="tip" role="status"></span>
-              </span>
+          <div class="copy-row">
+            <div>
+              <span class="muted">GoPay / DANA (a.n. Ikram Maulana)</span>
+              <strong id="rek-ewallet">0812 9044 7712</strong>
             </div>
+            <button type="button" class="btn btn-secondary copy-btn" data-copy="rek-ewallet">Salin</button>
+          </div>
 
-            <div class="gift-row">
-              <div class="gift-info">
-                <span class="gift-provider">Alamat Pengiriman Kado</span>
-                <span id="gift-address" class="gift-account">Jl. Melati Indah No. 18, Jakarta Selatan</span>
-                <span class="gift-owner">Penerima: Ikram Maulana</span>
-              </div>
-              <span class="copy">
-                <button
-                  type="button"
-                  class="copy-button"
-                  command="--copy"
-                  commandfor="gift-address"
-                  aria-label="Salin alamat pengiriman kado">
-                  <svg class="icon-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <rect x="9" y="9" width="13" height="13" rx="2"/>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                  </svg>
-                  <svg class="icon-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M20 6 9 17l-5-5"/>
-                  </svg>
-                  <span>Salin</span>
-                </button>
-                <span class="tip" role="status"></span>
-              </span>
+          <div class="copy-row">
+            <div>
+              <span class="muted">Alamat Pengiriman Kado</span>
+              <strong id="gift-addr">Jl. Melati Indah No. 18, Jakarta Selatan</strong>
             </div>
+            <button type="button" class="btn btn-secondary copy-btn" data-copy="gift-addr">Salin</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 4. GALERI FOTO & SCROLL ANIMATION -->
-    <section id="galeri" class="reveal-on-scroll" aria-labelledby="galeri-heading">
-      <div class="section-header">
-        <h2 id="galeri-heading" class="section-title">Galeri Malam Perayaan</h2>
-        <p class="section-desc">
-          Cuplikan suasana hangat, piringan hitam, dan momen kebersamaan yang akan menemani malam 12 Oktober.
-        </p>
-      </div>
-
-      <div class="gallery-grid">
-        <figure class="gallery-figure reveal-on-scroll">
-          <div class="gallery-frame">
-            <img src="assets/img/gallery-1.jpg" alt="Pemutar piringan hitam vinil di bawah cahaya lampu meja hangat" loading="lazy">
-          </div>
-          <figcaption class="gallery-caption">Koleksi piringan hitam dan musik latar indie favorit.</figcaption>
+    <section id="galeri" class="section reveal">
+      <h2>Galeri Malam Perayaan</h2>
+      <div class="grid-2">
+        <figure class="photo-card reveal">
+          <img src="assets/img/gallery-1.jpg" alt="Pemutar piringan hitam vinil" loading="lazy">
+          <figcaption class="muted">Piringan hitam dan musik indie favorit.</figcaption>
         </figure>
-
-        <figure class="gallery-figure reveal-on-scroll">
-          <div class="gallery-frame">
-            <img src="assets/img/gallery-2.jpg" alt="Kue ulang tahun minimalis dengan lilin menyala di atas meja kayu" loading="lazy">
-          </div>
-          <figcaption class="gallery-caption">Potong kue dan doa bersama di meja utama.</figcaption>
+        <figure class="photo-card reveal">
+          <img src="assets/img/gallery-2.jpg" alt="Kue ulang tahun dengan lilin menyala" loading="lazy">
+          <figcaption class="muted">Potong kue dan doa bersama.</figcaption>
         </figure>
-
-        <figure class="gallery-figure reveal-on-scroll">
-          <div class="gallery-frame">
-            <img src="assets/img/gallery-3.jpg" alt="Gitar akustik bersandar di dinding dekat jendela pada senja hari" loading="lazy">
-          </div>
-          <figcaption class="gallery-caption">Sesi akustik santai selepas makan malam.</figcaption>
+        <figure class="photo-card reveal">
+          <img src="assets/img/gallery-3.jpg" alt="Gitar akustik di dekat jendela" loading="lazy">
+          <figcaption class="muted">Sesi akustik santai selepas makan malam.</figcaption>
         </figure>
-
-        <figure class="gallery-figure reveal-on-scroll">
-          <div class="gallery-frame">
-            <img src="assets/img/gallery-4.jpg" alt="Meja makan malam diterangi cahaya lilin yang hangat" loading="lazy">
-          </div>
-          <figcaption class="gallery-caption">Makan malam hangat bersama sahabat terdekat.</figcaption>
+        <figure class="photo-card reveal">
+          <img src="assets/img/gallery-4.jpg" alt="Meja makan malam diterangi lilin" loading="lazy">
+          <figcaption class="muted">Makan malam hangat bersama sahabat.</figcaption>
         </figure>
       </div>
     </section>
 
     <!-- 5. FORMULIR RSVP & BUKU TAMU -->
-    <section id="rsvp" class="reveal-on-scroll" aria-labelledby="rsvp-heading">
-      <div class="section-header">
-        <h2 id="rsvp-heading" class="section-title">RSVP &amp; Buku Tamu</h2>
-        <p class="section-desc">
-          Beri tahu kami jika kamu bisa hadir, dan tinggalkan ucapan atau doa untuk Ikram.
-        </p>
-      </div>
+    <section id="rsvp" class="section reveal">
+      <h2>RSVP &amp; Buku Tamu</h2>
+      <div class="grid-2">
+        <form id="rsvp-form" class="box">
+          <label for="rsvp-name">Nama Tamu</label>
+          <input id="rsvp-name" type="text" placeholder="Masukkan namamu" required>
 
-      <div class="rsvp-layout">
-        <form id="rsvp-form" class="surface-panel rsvp-form" novalidate>
-          <div class="form-field">
-            <label class="form-label" for="rsvp-name">Nama Tamu</label>
-            <input
-              id="rsvp-name"
-              name="name"
-              type="text"
-              class="form-input"
-              placeholder="Contoh: Najwan"
-              autocomplete="name"
-              required>
-          </div>
+          <label for="rsvp-status">Status Kehadiran</label>
+          <select id="rsvp-status">
+            <option value="Hadir">Hadir</option>
+            <option value="Tidak Hadir">Tidak Hadir</option>
+          </select>
 
-          <fieldset class="attendance-fieldset">
-            <legend class="form-label">Status Kehadiran</legend>
-            <div class="attendance-options">
-              <label class="radio-pill">
-                <input type="radio" name="attendance" value="Hadir" checked>
-                <span>Hadir</span>
-              </label>
-              <label class="radio-pill">
-                <input type="radio" name="attendance" value="Tidak Hadir">
-                <span>Tidak Hadir</span>
-              </label>
-            </div>
-          </fieldset>
-
-          <div class="form-field">
-            <label class="form-label" for="rsvp-message">Ucapan &amp; Doa</label>
-            <textarea
-              id="rsvp-message"
-              name="message"
-              class="form-textarea"
-              placeholder="Tuliskan ucapan terbaikmu untuk Ikram..."
-              required></textarea>
-          </div>
+          <label for="rsvp-message">Ucapan &amp; Doa</label>
+          <textarea id="rsvp-message" rows="3" placeholder="Tulis ucapan untuk Ikram..." required></textarea>
 
           <button type="submit" class="btn btn-primary">Kirim Konfirmasi</button>
-          <p id="rsvp-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+          <p id="rsvp-feedback" class="feedback" role="status" aria-live="polite"></p>
         </form>
 
-        <div class="surface-panel">
-          <div class="guestbook-stats">
-            <span class="stat-chip">Hadir: <strong id="count-hadir">0</strong></span>
-            <span class="stat-chip">Tidak Hadir: <strong id="count-tidak">0</strong></span>
-          </div>
-          <ul id="guestbook-list" class="guestbook-list" aria-label="Daftar ucapan buku tamu"></ul>
+        <div class="box">
+          <p class="muted">Hadir: <strong id="count-hadir">0</strong> | Tidak Hadir: <strong id="count-tidak">0</strong></p>
+          <ul id="guestbook-list" class="guestbook-list" aria-label="Daftar buku tamu"></ul>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer container">
-    <div class="footer-inner">
-      <span>Perayaan Ulang Tahun Ikram, 12 Oktober</span>
-      <span>Disiapkan oleh Najwan, XI RPL 1</span>
-    </div>
+  <footer class="footer container">
+    <span>Perayaan Ulang Tahun Ikram, 12 Oktober</span>
+    <span>Disiapkan oleh Najwan, XI RPL 1</span>
   </footer>
 
   <!-- 6. KONTROL AUDIO (FLOATING MUSIC TOGGLE) -->
   <audio id="bg-music" loop preload="metadata">
     <source src="Radiohead%20-%20High%20and%20Dry%20(Instrumental).mp3" type="audio/mpeg">
   </audio>
-
-  <button
-    type="button"
-    id="audio-toggle-btn"
-    class="audio-toggle"
-    aria-pressed="false"
-    aria-label="Putar musik latar">
-    <span class="audio-bars" aria-hidden="true">
-      <span class="audio-bar"></span>
-      <span class="audio-bar"></span>
-      <span class="audio-bar"></span>
-    </span>
-    <span id="audio-label">Putar Musik</span>
-  </button>
-
+  <button type="button" id="audio-btn" class="audio-btn" aria-pressed="false">Putar Musik</button>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script src="assets/js/app.js"></script>
