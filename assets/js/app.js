@@ -71,7 +71,7 @@ const gcalUrl = new URL('https://calendar.google.com/calendar/render');
 gcalUrl.searchParams.set('action', 'TEMPLATE');
 gcalUrl.searchParams.set('text', 'Ulang Tahun Ikram');
 gcalUrl.searchParams.set('dates', `${toUtc(TARGET_ISO)}/${toUtc(END_ISO)}`);
-gcalUrl.searchParams.set('location', 'Ruang Tengah Coffee & Vinyl, Jl. Kemang Raya No. 42, Jakarta Selatan');
+gcalUrl.searchParams.set('location', 'Ruang Tengah Coffee & Vinyl, Jl. Aria Putra No. 46, Ciputat');
 document.getElementById('gcal-link').href = gcalUrl.toString();
 
 document.getElementById('ics-btn').addEventListener('click', () => {
@@ -82,7 +82,7 @@ document.getElementById('ics-btn').addEventListener('click', () => {
     `DTSTART:${toUtc(TARGET_ISO)}`,
     `DTEND:${toUtc(END_ISO)}`,
     'SUMMARY:Ulang Tahun Ikram',
-    'LOCATION:Ruang Tengah Coffee & Vinyl, Jakarta Selatan',
+    'LOCATION:Ruang Tengah Coffee & Vinyl, Jl. Aria Putra No. 46, Ciputat',
     'END:VEVENT',
     'END:VCALENDAR',
   ].join('\r\n');
