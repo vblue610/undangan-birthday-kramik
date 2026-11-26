@@ -114,7 +114,8 @@ img {
   padding: 2rem 1.25rem;
   background-color: var(--bg);
   background-image: linear-gradient(var(--cover-scrim), var(--bg-scrim)), url("../img/cover-bg.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   border-bottom: 1px solid var(--border);
   transition: opacity 450ms ease, transform 450ms ease;

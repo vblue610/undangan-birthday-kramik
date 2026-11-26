@@ -212,7 +212,7 @@ document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
 
   document.getElementById('rsvp-message').value = '';
   document.getElementById('rsvp-feedback').textContent = 'Konfirmasi dan ucapan tersimpan.';
-  showToast('Ucapan dikirim ke buku tamu.');
+  showToast('Ucapan Telah Terkirim...');
 });
 
 // 6. Animasi Scroll (IntersectionObserver)
