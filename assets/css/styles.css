@@ -121,7 +121,13 @@ img {
 
 .cover-box {
   width: 100%;
-  max-width: 600px;
+  max-width: 560px;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
   display: grid;
   gap: 1.25rem;
   justify-items: start;
@@ -129,11 +135,11 @@ img {
 
 .guest-box {
   width: 100%;
-  padding: 1rem 1.25rem;
-  background: var(--surface);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  padding-block: 1rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--accent);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   display: grid;
   gap: 0.25rem;
 }
