@@ -173,12 +173,12 @@ img {
 .cd-item { text-align: center; padding: 1rem 0.5rem; }
 .cd-num { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); line-height: 1; }
 
-.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.grid-2,
+.grid-3 { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
 
-@media (max-width: 680px) {
-  .grid-2,
-  .grid-3 { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 680px) {
+  .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }

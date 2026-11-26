@@ -110,7 +110,12 @@ document.querySelectorAll('.copy-btn').forEach((btn) => {
       await navigator.clipboard.writeText(text);
       showToast('Berhasil disalin ke clipboard.');
     } catch {
-      showToast('Gagal menyalin.');
+      const ta = Object.assign(document.createElement('textarea'), { value: text });
+      document.body.append(ta);
+      ta.select();
+      const ok = document.execCommand('copy');
+      ta.remove();
+      showToast(ok ? 'Berhasil disalin ke clipboard.' : 'Gagal menyalin.');
     }
   });
 });
