@@ -2,17 +2,20 @@
 
 :root {
   --bg: #111110;
+  --bg-scrim: rgba(17, 17, 16, 0.88);
+  --cover-scrim: rgba(17, 17, 16, 0.72);
   --surface: #1b1a18;
+  --surface-card: rgba(24, 22, 20, 0.92);
   --surface-2: #242220;
   --paper: #f3efe6;
   --text: #f3efe6;
-  --muted: #a8a298;
-  --accent: #d4894a;
-  --accent-hover: #e29b5e;
+  --muted: #b5aea2;
+  --accent: #e2a832;
+  --accent-hover: #f0ba4b;
   --on-accent: #111110;
-  --border: rgba(243, 239, 230, 0.14);
+  --border: rgba(243, 239, 230, 0.16);
   --success: #7fb08c;
-  --shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
   --font-display: "Instrument Serif", Georgia, serif;
   --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
 }
@@ -26,7 +29,11 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: clip;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: linear-gradient(var(--bg-scrim), var(--bg-scrim)), url("../img/cover-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-body);
   font-size: 16px;
@@ -105,7 +112,10 @@ img {
   display: grid;
   place-items: center;
   padding: 2rem 1.25rem;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: linear-gradient(var(--cover-scrim), var(--bg-scrim)), url("../img/cover-bg.jpg");
+  background-size: cover;
+  background-position: center;
   border-bottom: 1px solid var(--border);
   transition: opacity 450ms ease, transform 450ms ease;
 }
@@ -123,7 +133,7 @@ img {
   width: 100%;
   max-width: 560px;
   padding: clamp(1.5rem, 5vw, 2.5rem);
-  background: var(--surface);
+  background: var(--surface-card);
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 16px;
