@@ -355,9 +355,3 @@ textarea {
   color: var(--muted);
   font-size: 0.9375rem;
 }
-
-/* Matikan animasi/transisi jika pengguna mengaktifkan preferensi kurangi gerak di perangkat */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .cover, .reveal, .toast { transition: none !important; }
-}
