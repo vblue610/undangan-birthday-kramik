@@ -1,3 +1,6 @@
+const SUPABASE_URL = 'https://fzrgmcbcrimahrbiovhj.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_ZW8qhJjNNx8DST9c_3OJUw_GAr_SVNu';
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 const TARGET_ISO = '2027-10-12T19:00:00+07:00';
 const END_ISO = '2027-10-12T22:00:00+07:00';
 const STORAGE_KEY = 'ikram_birthday_rsvp_v1';
@@ -167,21 +170,46 @@ function renderGuestbook() {
   document.getElementById('count-tidak').textContent = String(tidak);
 }
 
-renderGuestbook();
+async function loadGuestbook() {
+  if (!db) return;
+  const { data, error } = await db
+    .from('rsvp')
+    .select('nama, status, ucapan')
+    .order('created_at', { ascending: false });
 
-document.getElementById('rsvp-form').addEventListener('submit', (e) => {
+  if (!error && data && data.length) {
+    entries = data.map((row) => ({
+      name: row.nama,
+      status: row.status,
+      message: row.ucapan,
+    }));
+    renderGuestbook();
+  }
+}
+
+renderGuestbook();
+loadGuestbook();
+
+document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = document.getElementById('rsvp-name').value.trim();
   const status = document.getElementById('rsvp-status').value;
   const message = document.getElementById('rsvp-message').value.trim();
   if (!name || !message) return;
 
-  entries = [{ name, status, message }, ...entries];
-  try {
+  if (db) {
+    const { error } = await db.from('rsvp').insert([{ nama: name, status, ucapan: message }]);
+    if (error) {
+      showToast('Gagal menyimpan ke Supabase.');
+      return;
+    }
+    await loadGuestbook();
+  } else {
+    entries = [{ name, status, message }, ...entries];
     localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
-  } catch { /* abaikan jika storage penuh */ }
+    renderGuestbook();
+  }
 
-  renderGuestbook();
   document.getElementById('rsvp-message').value = '';
   document.getElementById('rsvp-feedback').textContent = 'Konfirmasi dan ucapan tersimpan.';
   showToast('Ucapan dikirim ke buku tamu.');
